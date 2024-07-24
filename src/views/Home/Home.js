@@ -16,6 +16,10 @@ function Home() {
           localNews()
     },[])
 
+    useEffect(()=>{
+        localNews()
+  },[search])
+
 
   return (
     <div>
@@ -27,6 +31,7 @@ function Home() {
             setSearch(e.target.value)
            }}
         />
+
     
 
         <div className='news-cards-container'>
