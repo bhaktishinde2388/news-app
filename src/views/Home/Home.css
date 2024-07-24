@@ -6,7 +6,7 @@
     display: block;
     text-align: justify;
     object-fit: cover;
-    background-color: ;
+    
 }
 .news-card{
     width: 400px;
@@ -70,4 +70,9 @@ font-size: 17px;
 .readmore-btn:hover
 {
     box-shadow: 1px 1px 2px 1px green;
+}
+
+.input-box
+{
+    
 }

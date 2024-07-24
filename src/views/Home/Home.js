@@ -6,8 +6,10 @@ import "./Home.css"
 function Home() {
     const [news , setNews] =useState([])
 
+    const [search , setSearch] = useState("it")
+
     const localNews = async() => {
-        const response = await axios.get("https://newsapi.org/v2/everything?q=tesla&from=2024-06-24&sortBy=publishedAt&apiKey=8063435e33c3466c9ecbe13a5737392e");
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${search}&from=2024-06-24&sortBy=publishedAt&apiKey=8063435e33c3466c9ecbe13a5737392e`);
        setNews(response.data.articles)
     }
     useEffect(()=>{
@@ -17,7 +19,16 @@ function Home() {
 
   return (
     <div>
-       
+       <h1>NEWS📌</h1>
+
+        <input  className='input-box'
+        type='text' value={search} 
+           onChange={(e) =>{
+            setSearch(e.target.value)
+           }}
+        />
+    
+
         <div className='news-cards-container'>
         {
             news.map((article,index)=>{
