@@ -6,11 +6,17 @@ import "./Home.css"
 function Home() {
     const [news , setNews] =useState([])
 
-    const [search , setSearch] = useState("it")
+    const [search , setSearch] = useState("")
 
     const localNews = async() => {
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${search}&from=2024-06-24&sortBy=publishedAt&apiKey=8063435e33c3466c9ecbe13a5737392e`);
-       setNews(response.data.articles)
+       try{
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${search}&from=2024-06-24&sortBy=publishedAt&apiKey=${process.env.REACT_APP_API_KEY}`);
+        setNews(response.data.articles)
+     }
+      catch(e)
+       {
+        console.log(e)
+       }
     }
     useEffect(()=>{
           localNews()
