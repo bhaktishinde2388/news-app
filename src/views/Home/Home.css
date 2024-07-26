@@ -74,5 +74,7 @@ font-size: 17px;
 
 .input-box
 {
-    
+    width: 200px;
+    font-size: 20px;
+    margin: 0 auto;
 }
