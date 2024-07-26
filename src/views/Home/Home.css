@@ -1,7 +1,7 @@
 .news-article-img
 {
-    width: 370px;
-    height: 300px;
+    width: 350px;
+    height: 250px;
     margin: 0 auto;
     display: block;
     text-align: justify;
@@ -9,18 +9,18 @@
     
 }
 .news-card{
-    width: 400px;
+    width: 380px;
     height: 550px;
     border: 2px solid gray;
     border-radius: 10px;
-    margin: 10px;
+    margin: 15px;
     padding: 10px;
-    box-shadow: 1px 2px 3px 1px gray;
+  
    font-family: Arial;
    position: relative;
 }
 .news-card:hover{
-    box-shadow: 2px 3px 3px 1px gray;
+    box-shadow: 1px 2px 3px 1px gray;
     transform: matrix();
 }
 .news-cards-container{
@@ -69,12 +69,23 @@ font-size: 17px;
 }
 .readmore-btn:hover
 {
-    box-shadow: 1px 1px 2px 1px green;
+    box-shadow: 1px 1px 2px 1px gray;
 }
 
 .input-box
 {
-    width: 200px;
+    width: 60%;
     font-size: 20px;
     margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px 10px;
+    align-items: center;
+   display: block;
+margin-bottom: 20px;
+}
+
+.heading
+{
+    text-align: center;
 }

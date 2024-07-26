@@ -7,7 +7,7 @@ import "./Home.css"
 function Home() {
     const [news , setNews] =useState([])
 
-    const [search , setSearch] = useState("")
+    const [search , setSearch] = useState("india")
 
     const localNews = async() => {
        try{
@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <div>
-       <h1>NEWS📌</h1>
+       <h1 className='heading'> Breaking News📌</h1>
 
         <input  className='input-box'
         type='text' value={search} 
